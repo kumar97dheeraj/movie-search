@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Movie Search</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="main" class="search-page">
+                <div class="search-bar">
+                    <img
+                        src="search.svg"
+                        alt="Search"
+                        class="search-icon"
+                    />
+                    <input
+                        class="search-inp"
+                        type="text"
+                        placeholder="Search a Movie.."
+                        onkeyup="getMovies(this)"
+                    />
+                    <!-- <button class="btn btn__rounded">Search</button> -->
+                    <div class="search-result">
+                        <div class="search-result__spinner-container">
+                            <svg class="spinner">
+                                <circle cx="20" cy="20" r="18"></circle>
+                            </svg>
+                        </div>
+                        <div class="results"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detail" class="detail-page">
+                <div class="backdrop-container"></div>
+                <div class="backdrop-overlay">
+                    <div class="go-back">
+                        <div class="go-back__icon"></div>
+                        Go Back
+                    </div>
+                    <div class="backdrop-movie">
+                        <div class="backdrop-movie__col1">
+                            <div class="backdrop-movie__inner-col1">
+                                <div class="backdrop-movie__poster"></div>
+                            </div>
+                            <div class="backdrop-movie__inner-col2">
+                                <div class="backdrop-movie__genre">
+                                    <ul>
+                                        <li>Action</li>
+                                        <li>Adventure</li>
+                                        <li>Sci Fi</li>
+                                    </ul>
+                                </div>
+                                <div class="backdrop-movie__name-year">
+                                    <div class="backdrop-movie__name">
+                                        Avengers: Endgame
+                                    </div>
+                                    <div class="backdrop-movie__year">2019</div>
+                                </div>
+                                <div class="backdrop-movie__director">
+                                    Directors:
+                                    <ul>
+                                        <li>Anthony Russo</li>
+                                        <li>Joe Russo</li>
+                                    </ul>
+                                </div>
+                                <div class="backdrop-movie__cast">
+                                    Staring:
+                                    <ul>
+                                        <li>Chris Evans</li>
+                                        <li>Chris Hemsworth</li>
+                                        <li>Robert Downey Jr</li>
+                                        <li>Scarlett Johannson</li>
+                                    </ul>
+                                </div>
+                                <div class="backdrop-movie__overview">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Est cumque veniam
+                                    reprehenderit reiciendis? Necessitatibus
+                                    officiis, laboriosam architecto deleniti
+                                    facere aut.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backdrop-movie__col2">
+                            <div class="backdrop-movie__rating">
+                                7.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spinner-container">
+                <svg class="spinner">
+                    <circle cx="20" cy="20" r="18"></circle>
+                </svg>
+            </div>
+        </div>
+
+        <script src="jquery.js"></script>
+        <script src="anime.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
